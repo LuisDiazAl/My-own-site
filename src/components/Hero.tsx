@@ -18,7 +18,7 @@ export default function Hero() {
         </h1>
 
         <p className="text-lg sm:text-xl text-text-muted max-w-xl mx-auto mb-10 leading-relaxed">
-          Analista de Sistemas & Desarrollador Full Stack JR con enfoque en buenas prácticas e inteligencia artificial.
+          Enfocado en aprender nuevas tecnologías, construir proyectos y mejorar mis habilidades aplicando buenas prácticas de desarrollo e inteligencia artificial.
         </p>
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
