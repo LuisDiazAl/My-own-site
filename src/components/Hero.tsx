@@ -11,7 +11,7 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl sm:text-6xl lg:text-7xl font-semibold text-white mb-6 tracking-tight leading-[1.1]">
-          Código{' '}
+          Código,{' '}
           <em className="font-serif not-italic text-accent">aprendizaje</em>
           <br />
           y crecimiento
