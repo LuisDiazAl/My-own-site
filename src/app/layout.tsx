@@ -1,16 +1,23 @@
 import type { Metadata } from 'next'
-import { Montserrat, Inter } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import localFont from 'next/font/local'
 import './globals.css'
-
-const montserrat = Montserrat({
-  subsets: ['latin'],
-  variable: '--font-montserrat',
-  display: 'swap',
-})
 
 const inter = Inter({
   subsets: ['latin'],
   variable: '--font-inter',
+  display: 'swap',
+})
+
+const instrumentSerif = localFont({
+  src: [
+    {
+      path: '../fonts/InstrumentSerif-Italic.ttf',
+      weight: '400',
+      style: 'italic',
+    },
+  ],
+  variable: '--font-instrument-serif',
   display: 'swap',
 })
 
@@ -25,8 +32,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="es" className={`${montserrat.variable} ${inter.variable}`}>
-      <body className="bg-navy text-white font-inter">{children}</body>
+    <html lang="es" className={`${inter.variable} ${instrumentSerif.variable}`}>
+      <body className="bg-primary text-text-primary font-inter">{children}</body>
     </html>
   )
 }

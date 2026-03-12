@@ -1,11 +1,11 @@
 export default function Footer() {
   return (
-    <footer className="bg-white text-navy py-8 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto text-center">
-        <p className="text-navy mb-2 font-montserrat font-medium">
-          &copy; 2026 Analista de Sistemas Luis Diaz. Todos los derechos reservados.
+    <footer className="border-t border-border-subtle py-8 px-6 lg:px-10">
+      <div className="max-w-[1100px] mx-auto flex flex-col sm:flex-row justify-between items-center gap-4">
+        <p className="text-text-muted text-sm">
+          &copy; 2026 Luis Diaz. Todos los derechos reservados.
         </p>
-        <p className="text-gray-500 text-sm">
+        <p className="text-text-muted text-sm">
           Hecho con Next.js &bull; Tailwind CSS &bull; Vercel
         </p>
       </div>

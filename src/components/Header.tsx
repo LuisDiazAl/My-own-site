@@ -6,26 +6,30 @@ export default function Header() {
   const [isOpen, setIsOpen] = useState(false)
 
   return (
-    <header className="sticky top-0 z-50 bg-navy/80 backdrop-blur-md border-b border-gray-700">
-      <nav className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
-        <div className="text-2xl font-bold text-white font-montserrat">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-primary/60 backdrop-blur-xl border-b border-border-subtle">
+      <nav className="max-w-[1100px] mx-auto px-6 lg:px-10 py-5 flex justify-between items-center">
+        <a href="#" className="text-2xl font-semibold text-white tracking-tight">
           Luis Diaz
-        </div>
+        </a>
 
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden p-2 text-white"
+          className="md:hidden p-2 text-text-muted hover:text-white transition-colors"
         >
-          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+          <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            {isOpen ? (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M4 6h16M4 12h16M4 18h16" />
+            )}
           </svg>
         </button>
 
-        <div className={`${isOpen ? 'block' : 'hidden'} md:block md:flex gap-8 absolute md:relative top-16 md:top-0 left-0 right-0 md:left-auto md:right-auto bg-navy md:bg-transparent p-4 md:p-0 border-b md:border-0 border-gray-700`}>
-          <a href="#sobre-mi" className="text-gray-300 hover:text-accent transition-all duration-300">Sobre mí</a>
-          <a href="#stack" className="text-gray-300 hover:text-accent transition-all duration-300">Stack</a>
-          <a href="#proyectos" className="text-gray-300 hover:text-accent transition-all duration-300">Proyectos</a>
-          <a href="#contacto" className="text-gray-300 hover:text-accent transition-all duration-300">Contacto</a>
+        <div className={`${isOpen ? 'flex' : 'hidden'} md:flex flex-col md:flex-row gap-2 md:gap-8 absolute md:relative top-[65px] md:top-0 left-0 right-0 md:left-auto md:right-auto bg-primary/95 md:bg-transparent p-6 md:p-0 border-b md:border-0 border-border-subtle backdrop-blur-xl md:backdrop-blur-none`}>
+          <a href="#sobre-mi" onClick={() => setIsOpen(false)} className="text-sm text-text-muted hover:text-white transition-colors duration-200 py-2 md:py-0">Sobre mí</a>
+          <a href="#stack" onClick={() => setIsOpen(false)} className="text-sm text-text-muted hover:text-white transition-colors duration-200 py-2 md:py-0">Stack</a>
+          <a href="#proyectos" onClick={() => setIsOpen(false)} className="text-sm text-text-muted hover:text-white transition-colors duration-200 py-2 md:py-0">Proyectos</a>
+          <a href="#contacto" onClick={() => setIsOpen(false)} className="text-sm text-text-muted hover:text-white transition-colors duration-200 py-2 md:py-0">Contacto</a>
         </div>
       </nav>
     </header>

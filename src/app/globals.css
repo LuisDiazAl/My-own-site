@@ -12,3 +12,55 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  background-color: #04070d;
+  color: #d5dbe6;
+}
+
+/* Landio-style radial glow */
+.hero-glow {
+  position: absolute;
+  width: 600px;
+  height: 400px;
+  background: radial-gradient(ellipse at center, rgba(166, 218, 255, 0.12) 0%, transparent 70%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Subtle grid pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Glass card effect */
+.glass-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.glass-card:hover {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(166, 218, 255, 0.15);
+}
+
+/* Accent glow on buttons */
+.btn-glow {
+  box-shadow: 0 0 20px rgba(166, 218, 255, 0.15);
+}
+
+.btn-glow:hover {
+  box-shadow: 0 0 30px rgba(166, 218, 255, 0.25);
+}
+
+/* Divider line */
+.divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+}
