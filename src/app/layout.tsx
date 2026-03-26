@@ -22,7 +22,7 @@ const instrumentSerif = localFont({
 })
 
 export const metadata: Metadata = {
-  title: 'Analista de Sistemas - Luis Díaz',
+  title: 'Luis Díaz AS',
   description: 'Soluciones tecnológicas y consultoría en sistemas',
   icons: {
     icon: '/medical-tech-symbol.png',
