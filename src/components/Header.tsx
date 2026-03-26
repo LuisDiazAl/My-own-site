@@ -8,8 +8,8 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-primary/60 backdrop-blur-xl border-b border-border-subtle">
       <nav className="max-w-[1100px] mx-auto px-6 lg:px-10 py-5 flex justify-between items-center">
-        <a href="#" className="text-2xl font-semibold text-white tracking-tight">
-          Luis Diaz
+        <a href="#" className="flex items-center">
+          <img src="/logo-ld.png" alt="Luis Diaz" className="h-8 w-auto" />
         </a>
 
         <button
